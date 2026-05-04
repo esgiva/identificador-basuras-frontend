@@ -80,6 +80,7 @@ export default function AcercaDe() {
         <section className="acerca-section">
           <h2 className="acerca-section__title">Equipo del proyecto</h2>
           <p className="acerca-section__sub">Fundación Universitaria Lumen Gentium</p>
+          <p className="acerca-section__sub">Isabella Giraldo - Camila Espinosa - Camilo Grajales</p>
           <div className="team-card">
             <div className="team-logo">♻</div>
             <div>
