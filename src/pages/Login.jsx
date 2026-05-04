@@ -88,6 +88,7 @@ export default function Login() {
               onChange={handle}
               required
             />
+            <p>Use letras, numeros y simbolos</p>
           </div>
 
           {error && <div className="login-error">{error}</div>}
