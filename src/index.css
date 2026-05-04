@@ -1,0 +1,90 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-dark: #0d2818;
+  --bg-dark2: #122d1e;
+  --bg-card: #1a3d28;
+  --bg-card2: #1f4530;
+  --green-primary: #2d6a4f;
+  --green-accent: #40916c;
+  --green-bright: #52b788;
+  --green-light: #74c69d;
+  --green-pale: #b7e4c7;
+  --text-primary: #f0faf4;
+  --text-secondary: #a8d5b5;
+  --text-muted: #6aab82;
+  --aprovechable: #52b788;
+  --no-aprovechable: #e63946;
+  --organico: #f4a261;
+  --border: rgba(82, 183, 136, 0.15);
+  --border-bright: rgba(82, 183, 136, 0.35);
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Syne', sans-serif;
+  line-height: 1.2;
+}
+
+a { text-decoration: none; color: inherit; }
+
+button {
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+
+input, select, textarea {
+  font-family: 'DM Sans', sans-serif;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--green-primary); border-radius: 3px; }
+
+.page-enter {
+  animation: fadeUp 0.4s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-card2) 50%, var(--bg-card) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}

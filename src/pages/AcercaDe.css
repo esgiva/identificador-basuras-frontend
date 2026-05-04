@@ -1,0 +1,232 @@
+.acerca { min-height: 100vh; }
+
+.acerca__hero {
+  background: var(--bg-dark2);
+  border-bottom: 1px solid var(--border);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.acerca__hero h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.acerca__hero p {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.acerca__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.acerca-section__title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.acerca-section__sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* STEPS */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+
+.steps__line {
+  position: absolute;
+  top: 24px;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--green-primary), var(--green-accent));
+  z-index: 0;
+}
+
+.step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  animation: fadeUp 0.5s ease var(--delay, 0s) both;
+}
+
+.step__num {
+  width: 48px;
+  height: 48px;
+  background: var(--green-primary);
+  border: 3px solid var(--green-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--green-pale);
+}
+
+.step__title {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.step__desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* CATEGORIES */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.acerca-cat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--c);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.acerca-cat:hover { transform: translateY(-3px); }
+
+.acerca-cat__icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.acerca-cat__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.acerca-cat__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.acerca-cat__list li {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.4;
+}
+
+.acerca-cat__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--c);
+}
+
+/* TEAM */
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.team-logo {
+  width: 56px;
+  height: 56px;
+  background: var(--green-primary);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.team-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.team-detail {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.team-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.team-stack span {
+  background: rgba(82,183,136,0.1);
+  border: 1px solid var(--border-bright);
+  border-radius: 100px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  color: var(--green-light);
+}
+
+/* FOOTER */
+.acerca-footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .steps { grid-template-columns: 1fr 1fr; }
+  .steps__line { display: none; }
+  .cat-grid { grid-template-columns: 1fr; }
+  .acerca__inner { padding: 2rem 1rem; gap: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  .steps { grid-template-columns: 1fr; }
+  .team-card { flex-direction: column; }
+}
