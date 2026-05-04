@@ -154,9 +154,9 @@ export default function Home() {
           </div>
           <div className="hero__stats">
             {[
-              { value: '94%', label: 'Precisión' },
+              { value: '56.9%', label: 'Precisión mAP@0.5' },
               { value: '3', label: 'Categorías' },
-              { value: '36', label: 'Imágenes dataset' },
+              { value: '300', label: 'Épocas entrenadas' },
               { value: '31ms', label: 'Inferencia' },
             ].map(s => (
               <div key={s.label} className="hero__stat">

@@ -77,7 +77,7 @@ export default function Estadisticas() {
         <div className="page-header__inner">
           <h1 className="page-header__title">📊 Estadísticas del modelo</h1>
           <p className="page-header__sub">
-            Métricas de rendimiento · YOLO11s · 100 épocas en Google Colab
+            Métricas de rendimiento · YOLO11s · 300 épocas en Google Colab
           </p>
         </div>
       </div>
@@ -105,7 +105,7 @@ export default function Estadisticas() {
           />
           <MetricCard
             label="Épocas entrenadas"
-            value="100"
+            value="300"
             sub="Google Colab · GPU T4"
             color="#f4a261"
           />
